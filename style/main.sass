@@ -1,0 +1,415 @@
+@import "viewports.scss"
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+
+/* Variables *\
+$primary-font: 'Poppins', sans-serif
+$secondary-font: 'Montserrat', sans-serif
+
+$dark-colour: #131313
+$accent-colour: #F1EDED
+
+/* General *\
+html
+  height: 100vh
+  scroll-behavior: smooth
+
+body
+  margin: 0
+  height: 100vh
+  background-color: $dark-colour
+  font-family: $primary-font
+
+*, *:before, *:before
+  box-sizing: border-box
+
+/* Navigation Bar *\
+.container-navigation
+  position: fixed
+  width: 100%
+  padding: 1em
+  height: 100px
+  z-index: 999
+
+.hamburger
+  position: relative
+  left: 95%
+
+.container-menu
+  position: relative
+  display: none
+  top: 15%
+  width: 100%
+  
+ul
+  position: absolute 
+  list-style-type: none
+  margin: 0
+  padding: 0
+  left: 75% 
+  width: 100%
+ 
+  li
+    display: inline
+    a
+      color: $accent-colour
+      font-family: $secondary-font
+      font-size: 20px
+      padding-right: 75px
+
+    a:hover
+      color: white
+
+/* Header / Hero Section *\  
+.container-header
+  height: 1080px
+
+  .header-hero-titles
+    position: relative
+    left: 50%
+    transform: translateX(-50%)
+    width: 548px
+    height: 124px
+    top: 200px
+    opacity: 100
+
+    #hero-section-title
+      position: relative
+      margin: 0
+
+      font-style: normal
+      font-weight: bold
+      font-size: 64px
+      line-height: 85px
+      text-align: center
+
+      color: $accent-colour
+
+    #hero-section-figcaption
+      position: relative
+      margin: 0
+
+      font-family: $secondary-font
+      font-style: normal
+      font-weight: 300
+      font-size: 32px
+      line-height: 39px
+      text-align: center
+      letter-spacing: -0.05em
+
+      color: $accent-colour
+
+  #mountains-01
+    position: absolute
+    width: 100%
+    height: 365px
+    left: 0px
+    top: 615px
+    z-index: 1
+
+  #mountains-02
+    position: absolute
+    width: 100%
+    height: 430px
+    left: 0px
+    top: 521px
+    z-index: 0
+
+  #fixed-hero-image
+    position: absolute
+    z-index: -100
+    width: 100%
+    left: 0
+    top: -10%
+
+  #icon-scroll,
+  #icon-scroll:before
+    position: absolute
+    left: 50%
+
+  #icon-scroll
+    width: 31px
+    height: 62px
+    margin-left: -20px
+    top: 25%
+    margin-top: -35px
+    box-shadow: inset 0 0 0 1px $accent-colour
+    border-radius: 15.5px
+    z-index: 2
+   
+  #icon-scroll:before
+    content: ''
+    width: 13px
+    height: 13px
+    background: $accent-colour
+    margin-left: -6px
+    top: 8px
+    border-radius: 15.5px
+    animation-duration: 1.8s
+    animation-iteration-count: infinite
+    animation-name: scroll
+    z-index: 2
+   
+  @keyframes scroll
+    0%
+      opacity: 1
+
+    100%
+      opacity: 0
+      transform: translateY(43px)
+
+/* Work Section *\
+  
+.container-work
+  height: 1000px
+
+  #work-title
+    left: 50%
+    transform: translateX(-50%)
+    text-align: center
+    font-weight: bold
+    color: $accent-colour
+
+    opacity: 0
+    transition: opacity 4s
+  
+  .opacity-scroll
+    opacity: 1 !important
+  
+  #work-figcaption
+    left: 50%
+    transform: translateX(-50%)
+    text-align: center
+    color: $accent-colour
+
+    font-family: $secondary-font
+    font-size: 32px
+    line-height: 39px
+    letter-spacing: -0.05em
+    text-align: center
+
+    opacity: 0
+    transition: opacity 4s
+
+  .opacity-scroll-2
+    opacity: 1 !important
+
+  .carousel
+    height: 100%
+
+  .carousel a
+    top: 50px
+    height: 800px
+    width: 800px
+
+/* About Section *\
+/* Contact Section *\
+.container-contact
+  position: relative
+  height: 847px
+  margin-top: 150px
+
+  .decorative-title
+    position: absolute
+    left: 46.5%
+    opacity: 0.02
+    color: white
+    
+    .deco-title-01
+      font-size: 288px
+      font-weight: bold
+
+    .deco-title-02
+      font-size: 220px
+      font-weight: bold
+
+  .contact-title
+    position: absolute
+    left: 50%
+    transform: translateX(-50%)
+    top: 160px
+    text-align: center
+
+    .title-co
+      font-family: $primary-font
+      font-weight: bold
+      color: $accent-colour
+      line-height: 85px
+      letter-spacing: -0.05em
+
+    .subtitle-co
+      font-family: $secondary-font
+      color: $accent-colour
+      font-size: 32px
+      line-height: 39px
+      letter-spacing: -0.05em
+
+      width: 686px
+
+  .contact-button
+    width: 269px
+    height: 60px
+    border-radius: 25px
+    margin-top: 93px
+
+    border: none
+
+    font-family: $primary-font
+    font-size: 24px
+    font-weight: bold
+
+    transition: width 0.5s, font-size 0.5s
+
+  .contact-button:hover
+    width: 279px
+    font-size: 26px
+
+    cursor: pointer
+
+.container-socials-link
+  position: relative
+  top: 72px
+
+  #socials-linkedin
+    position: relative
+    margin-right: 69px
+
+.side-decoration-group
+  position: absolute
+  width: 437px
+  height: 383px
+  left: 70px
+  top: 295px
+
+  #deco-bottom
+    position: relative
+    left: 18.81%
+    right: 18.81%
+    top: 85.56%
+    bottom: 1.91%
+
+  #deco-bubble-bottom
+    position: absolute
+    left: 36.74%
+    right: 43.97%
+    top: 67.52%
+    bottom: 8.66%
+  
+  #deco-bubble-right
+    position: absolute
+    left: 54.19%
+    right: 11.27%
+    top: 0%
+    bottom: 57.33%
+
+  #deco-bubble-left
+    position: absolute
+    left: 16.7%
+    right: 58.58%
+    top: 24.02%
+    bottom: 45.17%
+
+  #deco-dot-1
+    position: absolute
+    left: 64.78%
+    right: 32.16%
+    top: 64.13%
+    bottom: 32.38%
+  
+  #deco-dot-2
+    position: absolute
+    left: 69.95%
+    right: 26.99%
+    top: 58.5%
+    bottom: 38.01%
+
+  #deco-dot-3
+    position: absolute
+    left: 65.96%
+    right: 30.99%
+    top: 54.88%
+    bottom: 41.63%
+
+  #deco-dot-4
+    position: absolute
+    left: 69.25%
+    right: 27.69%
+    top: 50.6%
+    bottom: 45.92%
+
+  #deco-dot-5
+    position: absolute
+    left: 64.43%
+    right: 32.51%
+    top: 44.16%
+    bottom: 52.35%
+
+/* Footer Section *\
+
+.footer-container
+  position: relative
+  height: 250px
+
+  background-color: #181818
+  opacity: 0.5
+
+  .footer-name
+    position: relative
+    margin: 0
+    left: 41px
+    top: 30px
+
+    font-family: Poppins
+    font-style: normal
+    font-weight: bold
+    font-size: 24px
+    line-height: 36px
+    letter-spacing: -0.05em
+
+    color: $accent-colour
+
+  .footer-figcaption
+    position: relative
+    left: 41px
+    top: 30px
+
+    font-family: $secondary-font
+    font-style: normal
+    font-weight: 300
+    font-size: 14px
+    line-height: 17px
+    letter-spacing: -0.065em
+
+    color: $accent-colour
+
+  .linkedin-mini
+    position: absolute
+    left: 41px
+    top: 94px
+    margin-right: 21px
+    width: 30px
+
+  .dribbble-mini
+    position: absolute
+    left: 82px
+    top: 94px
+    width: 30px
+
+  .image-credits
+    position: absolute
+    left: 41px
+    top: 161px
+    width: 100px
+
+    font-size: 10px
+    color: $accent-colour
+
+    a
+      text-decoration: none
+      color: $accent-colour
+      font-weight: bold
+
+  .unsplash-img
+    position: absolute
+    left: 41px
+    top: 197px
